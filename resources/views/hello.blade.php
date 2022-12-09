@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('page_title', 'Hello laravel')
+@section('page_title', "Hello $name")
 
 @section('vite')
 @parent
@@ -9,5 +9,5 @@
              
 
 @section('content')
-    <h1>Hello Laravel</h1>
+    <h1>Hello Laravel{{ $name }}</h1>
 @endsection
