@@ -1,0 +1,31 @@
+/**ceci est un commentaire*/
+
+body {
+     background-color:lightblue;
+}
+
+header nav ul { 
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;   
+    padding:0;
+    margin:1rem ;
+}
+
+header nav ul a{
+    background-color: antiquewhite;
+    border: 1px solid grey;
+    color:black;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+h1 {
+    font-size: 5rem;
+}
+
+img {
+    max-width: 100%;
+}
+img.medium-size{
+    width: 500px;
+}
