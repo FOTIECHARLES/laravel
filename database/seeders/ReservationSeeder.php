@@ -13,7 +13,36 @@ class ReservationSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        //
+    {  
+       // 2 résa avec des données statiques
+       // nom Foo
+       //prénom Foo
+       //jour 06/01/2023
+       //heure 12:00
+       //tel 0612345678
+       //    email foo.foo@example.com
+
+       // nom Bar
+       //prénom Bar
+       //jour 13/01/2023
+       // heure 12:00
+       //tel 0634532512
+       //
+
+
+      //nom
+      //$faker->lastName()
+      //prénom
+      //$faker->firstName()
+      //jour
+      //$faker->date('Y-m-d')
+      //heure
+      //$faker -> time('H:i')
+      //le nombre de personnes
+      //...
+      //tel
+      //$faker->phone
+
+
     }
 }
