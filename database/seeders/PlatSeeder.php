@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Faker;
 use App\Models\Categorie;
-use App\Models\photoPlat;
+use App\Models\PhotoPlat;
 use App\Models\Plat;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -46,33 +46,33 @@ class PlatSeeder extends Seeder
        $platDatas = [
         
         
-        
-        [
-            'nom'=>'Foo',
-            'description' => 'Lorem, ipsum dolor sit amet consectetur.',
-            'prix' => 23.16,
-            'epingle'=> false,
-            'photo_plat_id'=> $photo->id,
-            'categorie_id' => $categorieEntree->id,
-        ],
-        [
-            'nom'=>'bar',
-            'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing .',
-            'prix' => 23.15,
-            'epingle'=> true,
-            'photo_plat_id'=> $photo->id,
-            'categorie_id' => $categoriePlat->id,
-        ],
+                    
+                    [
+                        'nom'=>'Foo',
+                        'description' => 'Lorem, ipsum dolor sit amet consectetur.',
+                        'prix' => 23.16,
+                        'epingle'=> false,
+                        'photo_plat_id'=> $photo->id,
+                        'categorie_id' => $categorieEntree->id,
+                    ],
+                    [
+                        'nom'=>'bar',
+                        'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing .',
+                        'prix' => 23.15,
+                        'epingle'=> true,
+                        'photo_plat_id'=> $photo->id,
+                        'categorie_id' => $categoriePlat->id,
+                    ],
 
-        [
-            'nom'=>'baz',
-            'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
-            'prix' => 23.14,
-            'epingle'=> false,
-            'photo_plat_id'=> $photo->id,
-            'categorie_id' => $categorieDessert->id,
-        ],
-        ];
+                    [
+                        'nom'=>'baz',
+                        'description' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+                        'prix' => 23.14,
+                        'epingle'=> false,
+                        'photo_plat_id'=> $photo->id,
+                        'categorie_id' => $categorieDessert->id,
+                    ],
+                    ];
         foreach ($platDatas as $platData){      
             $plat = new Plat();
             $plat->nom =$platData ['nom'];
