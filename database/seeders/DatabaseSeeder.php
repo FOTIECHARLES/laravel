@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             PhotoPlatSeeder::class,
             PlatSeeder::class,
             ReservationSeeder::class,
+            EtiquetteSeeder::class,
         ]);
     }
 }
