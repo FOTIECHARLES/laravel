@@ -1,4 +1,7 @@
 <?php
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\HelloController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -13,27 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/hello/{name}', function ($name) {
-    
-    // traitement des données
-    $name= '"'.$name.'"';
-    
-    return view('hello', [
-        // passage de variables à une vue
-        'name' => $name,
-    ]);
-
-})->name('hello');
+Route::get('/hello/{name}',[HelloController::class,'index'])->name('hello');
 
 // @todo creer les routes pour les pages Menu, Contact et reservation
 
-Route::get('/menu', function () {
-    return view('menu');
-})->name('menu');
+Route::get('/menu',[MenuController::class, 'index'])->name('menu');
 
 Route::get('/contact', function () {
     return view('contact');

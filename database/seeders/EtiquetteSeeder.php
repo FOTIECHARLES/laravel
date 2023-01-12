@@ -32,12 +32,19 @@ class EtiquetteSeeder extends Seeder
 
         foreach ($etiquetteDatas as $etiquetteData){   
             $etiquette = new Etiquette();
-            $etiquette->nom=$etiquette["nom"];
-            $etiquette->description=$etiquette["description"];
+            $etiquette->nom=$etiquetteData["nom"];
+            $etiquette->description=$etiquetteData["description"];
             $etiquette->save();   
         }
-        // // 13 Etiquettes
-        // for($i=0; $< 13; $i++)   
-   
+        
+        for ($i = 0 ;$i < 13; $i++){
+            $etiquette = new Etiquette();
+            $etiquette->nom = $faker->words(5, true);
+            $etiquette->description = $faker->words(10, true);
+            $etiquette->save();
+            
+           
+        
+        }
     }
 }
