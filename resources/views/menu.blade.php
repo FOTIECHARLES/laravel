@@ -4,13 +4,25 @@
              
 
 @section('content')
+     <h1>Menu</h1>
 
-<h1>Menu</h1>
-<ul>
 @foreach($categories as $categorie)
-       <li>{{ $categorie->nom }} {{ $categorie->description}}</li>
+    <h2>{{ $categorie->nom }} </h2>
+    <p>{{ $categorie->description}}</p>
+    
+    <ul>
+        @foreach ($categorie->platsSorteByPrix as $plat)
+        <li>
+            {{ $plat->nom }} {{ $plat->prix }} eur<br>
+            {{ $plat->description }}<br>
+            @foreach($plat->etiquettes as $etiquette)
+                #{{$etiquette->nom}}
+            @endforeach
+        </li>
+        @endforeach
+    </ul>
 @endforeach
-</ul>
+
 <strong>poulet avec de la sauce arachide</strong><br/>
 <strong>couscous                        </strong><br/>
 
