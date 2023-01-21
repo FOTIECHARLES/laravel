@@ -8,12 +8,12 @@ class MenuController extends Controller
 {
     public function index()
     {
-       $categories = Categorie::all();
+        //select * FROM categorie    
+        $categories = Categorie::all();
 
-        // dd($categories);
-        //dump and die
-        return view('menu', [
-            'categories' => $categories,
+        
+         return view('menu', [
+        'categories' => $categories,
         ]); 
     }
 }
