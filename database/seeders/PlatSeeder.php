@@ -105,6 +105,7 @@ class PlatSeeder extends Seeder
             $plat->prix = $platData['prix'];
             $plat->epingle = $platData['epingle'];
             $plat->photo_plat_id = $platData['photo_plat_id'];
+            
             $plat->categorie_id =$platData['categorie_id'];
             //sauvegarde de la BDD
             $plat->save();
@@ -151,8 +152,8 @@ class PlatSeeder extends Seeder
             $plat->save();
 
             //association d'étiquettes au plat
-            $Count= random_int(1, 5);
-           $shortList = $faker->randomElements($etiquetteIds, 3);
+            $count= random_int(1, 5);
+           $shortList = $faker->randomElements($etiquetteIds,  $count);
            $plat->etiquettes()->attach($shortList);
             
             

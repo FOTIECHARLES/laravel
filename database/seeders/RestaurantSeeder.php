@@ -47,6 +47,6 @@ class RestaurantSeeder extends Seeder
           $restaurant->valeur = $restaurantData['valeur'];
           // sauvegarde dans la BDD
           $restaurant->save();
-      }
+        }
     }
 }
