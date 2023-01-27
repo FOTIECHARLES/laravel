@@ -27,6 +27,11 @@ h1 {
     font-size: 5rem;
 }
 
+table td {
+    padding: 0.50rem;
+    border: 2px solid black;
+}
+
 img {
     max-width: 100%;
 }
