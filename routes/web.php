@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\Admin\PlatController as AdminPlatController;
 use App\Http\Controllers\Admin\ReservationController as AdminReservationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// routes du front office
+
+// page d'accueil
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/hello/{name}',[HelloController::class,'index'])->name('hello');
@@ -37,20 +41,32 @@ Route::get('/mention-legales', function () {
     return view('mentions-legales');
 })->name('mentions-legales');
 
+// routes du back office
+
+// CRUD plat
+//@todo liste des plats
+
+Route::get('/admin/plat/create',[AdminPlatController::class,'create'])->middleware('auth')->name('admin.plat.create');
+Route::post('/admin/plat',[AdminPlatController::class,'store'])->middleware('auth')->name('admin.plat.store');
+
+
+
+// CRUD réservation
 Route::get('/admin/reservation', [AdminReservationController::class,
 'index'])->middleware('auth')->name('admin.reservation.index');
 
 
 Route::get('/admin/reservation/create', [AdminReservationController::class,
 'create'])->middleware('auth')->name('admin.reservation.create');
-Route::post('/admin/reservation/store', [AdminReservationController::class,
+Route::post('/admin/reservation', [AdminReservationController::class,
 'store'])->middleware('auth')->name('admin.reservation.store');
 
 Route::get('/admin/reservation/{id}/edit', [AdminReservationController::class,
 'edit'])->middleware('auth')->name('admin.reservation.edit');
-Route::post('/admin/reservation/{id}/update', [AdminReservationController::class,
+Route::put('/admin/reservation/{id}', [AdminReservationController::class,
 'update'])->middleware('auth')->name('admin.reservation.update');
 
+Route::delete('/admin/reservation/{id}',[AdminReservationController::class,'delete'])->middleware('auth')->name('admin.reservation.delete');
 
 //routes de breeze
 Route::get('/dashboard', function () {

@@ -23,6 +23,7 @@
     <div>
     <form action="{{ route('admin.reservation.update', ['id'=> $reservation->id])}}" method="post">
     @csrf
+    @method('PUT')
     </div>
     <div>
         <input class=" @error('nom') form--input--error @enderror"type="text" name="nom" id=""value="{{ old('nom', $reservation->nom) }}">
@@ -44,12 +45,16 @@
         <input class=" @error('jour') form--input--error @enderror"type="date" name="jour" id=""value="{{ old('jour', $reservation->jour) }}">
         @error('jour')
         <div class="form--error-message">
-        {{ $message }}
+       La date doit être le jour même ou un jour ultérieur
         </div>
         @enderror
     </div>
     <div>
-        <input class=" @error('heure') form--input--error @enderror"type="time" name="heure" id=""value="{{ old('heure', $reservation->heure) }}" >
+        <select name="heure" id="">
+            @foreach ($creneaux_horaires as $creneau_horaire)
+                <option value="{{ $creneau_horaire }}" @if (old('heure', $reservation->heure) == $creneau_horaire) selected @endif>{{ $creneau_horaire }}</option>
+            @endforeach
+        </select>
         @error('heure')
         <div class="form--error-message">
         {{ $message }}
