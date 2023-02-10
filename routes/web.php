@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\Admin\PlatController as AdminPlatController;
 use App\Http\Controllers\Admin\ReservationController as AdminReservationController;
+use App\Http\Controllers\Admin\ActuController as AdminActuController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\HelloController;
@@ -42,6 +43,9 @@ Route::get('/mention-legales', function () {
 })->name('mentions-legales');
 
 // routes du back office
+
+//CRUD actu
+Route::get('/admin/actu', [AdminActuController::class,'index'])->middleware('auth')->name('admin.actu.index');
 
 // CRUD plat
 //@todo liste des plats
