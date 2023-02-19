@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\Admin\PlatController as AdminPlatController;
 use App\Http\Controllers\Admin\ReservationController as AdminReservationController;
 use App\Http\Controllers\Admin\ActuController as AdminActuController;
@@ -49,6 +50,9 @@ Route::get('/admin/actu', [AdminActuController::class,'index'])->middleware('aut
 
 // CRUD plat
 //@todo liste des plats
+
+Route::get('/admin/plat', [AdminPlatController::class,
+'index'])->middleware('auth')->name('admin.plat.index');
 
 Route::get('/admin/plat/create',[AdminPlatController::class,'create'])->middleware('auth')->name('admin.plat.create');
 Route::post('/admin/plat',[AdminPlatController::class,'store'])->middleware('auth')->name('admin.plat.store');

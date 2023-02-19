@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use App\Models\PhotoPlat;
 use App\Models\Categorie;
 use App\Models\Etiquette;
+use App\Models\PhotoPlat;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
