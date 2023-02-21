@@ -30,12 +30,12 @@
                 <TD>{{ $plat->prix  }} </TD>
                 <TD>{{ $plat->description  }} </TD>
                 <TD>{{ $plat->epingle  }} </TD> 
-                {{-- <TD><a href="{{ route( 'admin.plat.edit', ['id' => $plat->id])}}">modifier</a> --}}
-                {{-- <form action="{{ route('admin.plat.delete',['id' => $plat->id]) }}" method="post"onsubmit="return window.confirm('êtes vous sur de vouloir supprimer cet élement?');">
+                <TD><a href="{{ route( 'admin.plat.edit', ['id' => $plat->id])}}">modifier</a> 
+                <form action="{{ route('admin.plat.delete',['id' => $plat->id]) }}" method="post"onsubmit="return window.confirm('êtes vous sur de vouloir supprimer cet élement?');">
                 @csrf
-                @method('DELETE') --}}
-                {{-- <button type="submit">supprimer</button></form> --}}
-                {{-- </TD> --}}
+                @method('DELETE') 
+                <button type="submit">supprimer</button></form>
+                </TD>
             </TR>
             @endforeach
         </TBody>
