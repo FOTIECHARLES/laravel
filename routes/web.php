@@ -57,6 +57,12 @@ Route::get('/admin/plat', [AdminPlatController::class,
 Route::get('/admin/plat/create',[AdminPlatController::class,'create'])->middleware('auth')->name('admin.plat.create');
 Route::post('/admin/plat',[AdminPlatController::class,'store'])->middleware('auth')->name('admin.plat.store');
 
+Route::get('/admin/plat/{id}/edit', [AdminPlatController::class,
+'edit'])->middleware('auth')->name('admin.plat.edit');
+Route::put('/admin/plat/{id}', [AdminPlatController::class,
+'update'])->middleware('auth')->name('admin.plat.update');
+
+Route::delete('/admin/plat/{id}',[AdminPlatController::class,'delete'])->middleware('auth')->name('admin.plat.delete');
 
 
 // CRUD réservation
