@@ -11,7 +11,7 @@ class ReservationController extends Controller
 {
     public function index()
     {   
-        // récupérer la liste des reservations   
+        // récupère la liste des reservations   
           $reservations = Reservation::all();
         
         // transmission des réservations à la vue
@@ -20,12 +20,16 @@ class ReservationController extends Controller
         ]);
     }
 
+      /**
+     * Affiche un formulaire de création de réservation
+     *
+     * @return Response
+     */
     public function create()
     {
         // valeur par défaut
        $reservation = new stdClass;
       
-
        $reservation->nom = '';
        $reservation->prenom = '';
        $reservation->jour ='';
@@ -34,6 +38,7 @@ class ReservationController extends Controller
        $reservation->tel ='';
        $reservation->email ='';
        
+       //// récupération des créneaux horaires de réservation
        $creneaux_horaires = $this->getCreneauxHoraires();
 
 
@@ -46,7 +51,7 @@ class ReservationController extends Controller
     }
 
     /**
-     * Enregistre les données de la bdd
+     * Enregistre les données d'une nouvelle réservation dans la BDD
      *
      * @return Response
      */
@@ -86,9 +91,9 @@ class ReservationController extends Controller
     
 
     /**
-     * Undocumented function
+     * Affiche un formulaire de modification d'une réservation
      *
-     * @param integer $id
+     * @param integer $id identifiant de la réservation
      * @return Response
      */
     public function edit(int $id)
@@ -113,8 +118,9 @@ class ReservationController extends Controller
         ]);
     }
     
+  
     /**
-     * Met à jour les données de la réservation
+     * Met à jour les données d'une réservation existante dans la BDD
      *
      * @return Response
      */
