@@ -14,26 +14,11 @@
         <div>
              <input type="text" name="nom" id="" placeholder="nom du plat" value="">
         </div>
-            @error('nom')
-            <div class="form--error-message">
-            {{ $message }}
-        </div>
-            @enderror
         <div>
-            <input type="number" name="prix" id="" placeholder="prix du plat" value="">
-            @error('prix')
-            <div class="form--error-message">
-            {{ $message }}
-        </div>
-        @enderror
+            <input type="text" name="prix" id="" placeholder="prix du plat" value="">
        </div>
        <div>
         <textarea name="description" id="" cols="30" rows="10" placeholder="description du plat"></textarea>
-        @error('description')
-        <div class="form--error-message">
-        {{ $message }}
-        </div>
-        @enderror
         </div>
         <div>
             <select name="categorie_id" id="">
