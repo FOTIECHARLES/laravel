@@ -51,9 +51,9 @@ class PlatController extends Controller
         // dd($request->all());
         $validated = $request->validate([
             'nom' => 'required|min:2|max:100',
-            'prix' => 'required|decimal:0', 
-            'description'=>'required|filled',
-            'epingle'=> 'required|numeric|gte:1|lte:5',
+            'prix' => 'required|numeric|min:1|max:200', 
+            'description'=>'required|min:10|max:1000',
+            'epingle'=> '',
 
         ]);
         
@@ -63,7 +63,7 @@ class PlatController extends Controller
         $plat->nom =$request->get('nom');
         $plat->prix =$request->get('prix');
         $plat->description =$request->get('description');
-        $plat->epingle =$request->get('epingle');
+        $plat->epingle =$request->get('epingle', false);
         $plat->save();
         
 
@@ -112,9 +112,10 @@ class PlatController extends Controller
 
         $validated = $request->validate([
             'nom' => 'required|min:2|max:100',
-            'prix' => 'required|decimal:0', 
-            'description'=>'required|filled',
-            'epingle'=> 'required|numeric|gte:1|lte:5',
+            'prix' => 'required|numeric|min:1|max:200', 
+            'description'=>'required|min:10|max:1000',
+            'epingle'=> '',
+
            
         ]);
         
@@ -131,7 +132,7 @@ class PlatController extends Controller
         $plat->nom =$request->get('nom');
         $plat->prix =$request->get('prix');
         $plat->description =$request->get('description');
-        $plat->epingle =$request->get('epingle');
+        $plat->epingle =$request->get('epingle', false);
         $plat->save();
         
 
