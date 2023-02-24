@@ -54,6 +54,8 @@ class PlatController extends Controller
             'prix' => 'required|numeric|min:1|max:200', 
             'description'=>'required|min:10|max:1000',
             'epingle'=> '',
+            'photo_plat_id'=>'',
+            'categorie_id'=>'',
 
         ]);
         
@@ -64,6 +66,8 @@ class PlatController extends Controller
         $plat->prix =$request->get('prix');
         $plat->description =$request->get('description');
         $plat->epingle =$request->get('epingle', false);
+        $plat->photo_plat_id =$request->get('photo_plat_id', false);
+        $plat->categorie_id =$request->get('categorie_id', false);
         $plat->save();
         
 
