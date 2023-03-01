@@ -36,6 +36,12 @@ img.medium-size{
     width: 500px;
 }
 
+.banner {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
 .menu--photo-plat{
     width: 100px;
     
