@@ -50,8 +50,8 @@ class ActuController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'jour_publication' => 'required|min:2|date_format:Y-m-d',
-            'heure_publication' => 'required|date|after_or_equal:today',
+            'jour_publication' => 'required|min:2|date_format:Y-m-d|',
+            'heure_publication' => 'required|date_format:H:i',
             'texte' => 'required|min:10|max:1000', 
             
         ]);
@@ -71,9 +71,9 @@ class ActuController extends Controller
     }
 
     /**
-     * Affiche un formulaire de modification d'une réservation
+     * Affiche un formulaire de modification d'une actu
      *
-     * @param integer $id identifiant de la réservation
+     * @param integer $id identifiant de l'actu
      * @return Response
      */
     public function edit(int $id)
@@ -103,8 +103,8 @@ class ActuController extends Controller
     {
 
         $validated = $request->validate([
-            'jour_publication' => 'required|min:2|max:100',
-            'heure_publication' => 'required|date|after_or_equal:today',
+            'jour_publication' => 'required|min:2|date_format:Y-m-d|',
+            'heure_publication' => 'required|date_format:H:i',
             'texte' => 'required|min:10|max:1000', 
             
         ]);
