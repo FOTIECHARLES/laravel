@@ -3,9 +3,10 @@
 use App\Http\Controllers\Admin\PlatController as AdminPlatController;
 use App\Http\Controllers\Admin\ReservationController as AdminReservationController;
 use App\Http\Controllers\Admin\ActuController as AdminActuController;
+use App\Http\Controllers\Admin\Photo_platController as AdminPhoto_platController;
 
 
-
+use App\Http\Controllers\Photo_platController;
 use App\Http\Controllers\ActuController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\HomeController;
@@ -64,7 +65,7 @@ Route::put('/admin/actu/{id}', [AdminActuController::class,
 Route::delete('/admin/actu/{id}',[AdminActuController::class,'delete'])->middleware('auth')->name('admin.actu.delete');
 
 // CRUD plat
-//@todo liste des plats
+
 
 Route::get('/admin/plat', [AdminPlatController::class,
 'index'])->middleware('auth')->name('admin.plat.index');
@@ -78,6 +79,24 @@ Route::put('/admin/plat/{id}', [AdminPlatController::class,
 'update'])->middleware('auth')->name('admin.plat.update');
 
 Route::delete('/admin/plat/{id}',[AdminPlatController::class,'delete'])->middleware('auth')->name('admin.plat.delete');
+
+// CRUD photo_plats
+
+
+Route::get('/admin/photo_plat', [AdminPhoto_platController::class,
+'index'])->middleware('auth')->name('admin.photo_plat.index');
+
+Route::get('/admin/photo_plat/create',[AdminPhoto_platController::class,'create'])->middleware('auth')->name('admin.photo_plat.create');
+Route::post('/admin/photo_plat',[AdminPhoto_platController::class,'store'])->middleware('auth')->name('admin.photo_plat.store');
+
+Route::get('/admin/photo_plat/{id}/edit', [AdminPhoto_platController::class,
+'edit'])->middleware('auth')->name('admin.photo_plat.edit');
+Route::put('/admin/photo_plat/{id}', [AdminPhoto_platController::class,
+'update'])->middleware('auth')->name('admin.photo_plat.update');
+
+Route::delete('/admin/photo_plat/{id}',[AdminPhoto_platController::class,'delete'])->middleware('auth')->name('admin.photo_plat.delete');
+
+
 
 
 // CRUD réservation

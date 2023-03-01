@@ -4,7 +4,7 @@ namespace App\Models;
 
 use App\Models\Categorie;
 use App\Models\Etiquette;
-use App\Models\PhotoPlat;
+use App\Models\Photo_plat;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -27,11 +27,11 @@ class Plat extends Model
      /**
      * cette fonction permet de recupérer la photo
      *
-     * @return PhotoPlat
+     * @return Photo_plat
      */
     public function photo()
     {
-        return $this->belongsto(PhotoPlat::class,'photo_plat_id', 'id');
+        return $this->belongsto(Photo_plat::class,'photo_plat_id', 'id');
     }
 
     /**

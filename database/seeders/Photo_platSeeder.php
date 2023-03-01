@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\PhotoPlat;
+use App\Models\Photo_plat;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class PhotoPlatSeeder extends Seeder
+class Photo_platSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -27,7 +27,7 @@ class PhotoPlatSeeder extends Seeder
         
         foreach ($photoDatas as $photoData){
             //création d'une nouvelle photo
-            $photo = new PhotoPlat();
+            $photo = new Photo_plat();
             //selection fichier jpg
             $photo->chemin = $photoData;
             //sauvegarde de la BDD

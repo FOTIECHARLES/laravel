@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             ActuSeeder::class,
             CategorieSeeder::class,
             EtiquetteSeeder::class,
-            PhotoPlatSeeder::class,
+            Photo_platSeeder::class,
             PlatSeeder::class,
             ReservationSeeder::class,
             RestaurantSeeder::class,

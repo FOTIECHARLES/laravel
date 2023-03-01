@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Categorie;
 use App\Models\Etiquette;
-use App\Models\PhotoPlat;
+use App\Models\Photo_plat;
 use App\Models\Plat;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -37,7 +37,7 @@ class PlatController extends Controller
         return view('admin.plat.create',[
             'categories' => $categories,
             'etiquettes' => $etiquettes,
-            'photoPlats' => $photoPlats,
+            'photo_plats' => $photo_plats,
         ]);
     }
    
