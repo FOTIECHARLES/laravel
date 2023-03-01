@@ -3,6 +3,11 @@
 use App\Http\Controllers\Admin\PlatController as AdminPlatController;
 use App\Http\Controllers\Admin\ReservationController as AdminReservationController;
 use App\Http\Controllers\Admin\ActuController as AdminActuController;
+
+
+
+use App\Http\Controllers\ActuController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\HelloController;
@@ -47,6 +52,16 @@ Route::get('/mention-legales', function () {
 
 //CRUD actu
 Route::get('/admin/actu', [AdminActuController::class,'index'])->middleware('auth')->name('admin.actu.index');
+
+Route::get('/admin/actu/create',[AdminActuController::class,'create'])->middleware('auth')->name('admin.actu.create');
+Route::post('/admin/actu',[AdminActuController::class,'store'])->middleware('auth')->name('admin.actu.store');
+
+Route::get('/admin/actu/{id}/edit', [AdminActuController::class,
+'edit'])->middleware('auth')->name('admin.actu.edit');
+Route::put('/admin/actu/{id}', [AdminActuController::class,
+'update'])->middleware('auth')->name('admin.actu.update');
+
+Route::delete('/admin/actu/{id}',[AdminActuController::class,'delete'])->middleware('auth')->name('admin.actu.delete');
 
 // CRUD plat
 //@todo liste des plats
