@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\PlatController as AdminPlatController;
 use App\Http\Controllers\Admin\ReservationController as AdminReservationController;
+use App\Http\Controllers\Admin\EtiquetteController as AdminEtiquetteController;
 use App\Http\Controllers\Admin\ActuController as AdminActuController;
 use App\Http\Controllers\Admin\CategorieController as AdminCategorieController;
 use App\Http\Controllers\Admin\Photo_platController as AdminPhoto_platController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\Photo_platController;
 use App\Http\Controllers\ActuController;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\Admin\EtiquetteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\HelloController;
@@ -114,6 +116,22 @@ Route::put('/admin/categorie/{id}', [AdminCategorieController::class,
 'update'])->middleware('auth')->name('admin.categorie.update');
 
 Route::delete('/admin/categorie/{id}',[AdminCategorieController::class,'delete'])->middleware('auth')->name('admin.categorie.delete');
+
+// CRUD Etiquette
+
+
+Route::get('/admin/etiquette', [AdminEtiquetteController::class,
+'index'])->middleware('auth')->name('admin.etiquette.index');
+
+Route::get('/admin/etiquette/create',[AdminEtiquetteController::class,'create'])->middleware('auth')->name('admin.etiquette.create');
+Route::post('/admin/etiquette',[AdminEtiquetteController::class,'store'])->middleware('auth')->name('admin.etiquette.store');
+
+Route::get('/admin/etiquette/{id}/edit', [AdminEtiquetteController::class,
+'edit'])->middleware('auth')->name('admin.etiquette.edit');
+Route::put('/admin/etiquette/{id}', [AdminEtiquetteController::class,
+'update'])->middleware('auth')->name('admin.etiquette.update');
+
+Route::delete('/admin/etiquette/{id}',[AdminEtiquetteController::class,'delete'])->middleware('auth')->name('admin.etiquette.delete');
 
 
 
