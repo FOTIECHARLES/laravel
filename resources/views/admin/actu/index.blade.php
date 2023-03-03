@@ -22,23 +22,19 @@
       <th>heure_publication</th>
       <th>texte</th>
         <tr>
-
-            {{-- @foreach($actus as $actu)
+            @foreach($actus as $actu)
             <TR>   
-                <TD>{{ $actu->nom }} </TD>   
-                <TD>{{ $actu->prenom }} </TD>
-                <TD>{{ $actu->jour }} </TD>
-                <TD>{{ $actu->heure }} </TD> 
-                <TD>{{ $actu->nombre_personnes }} </TD>
-                <TD>{{ $actu->tel  }} </TD>
-                <TD>{{ $actu->email  }} </TD>
+                <TD>{{ $actu->jour_publication  }} </TD>   
+                <TD>{{ $actu->heure_publication  }} </TD>
+                <TD>{{ $actu->texte  }} </TD>
+                <TD><a href="{{ route( 'admin.actu.edit', ['id' => $actu->id])}}">modifier</a>
                 <form action="{{ route('admin.actu.delete',['id' => $actu->id]) }}" method="post"onsubmit="return window.confirm('êtes vous sur de vouloir supprimer cet élement?');">
                 @csrf
                 @method('DELETE')
-                <button type="submit">supprimer</button></form> --}}
-                {{-- </TD> --}}
-            {{-- </TR> --}}
-            {{-- @endforeach --}}
+                <button type="submit">supprimer</button></form>
+                </TD>
+            </TR>
+            @endforeach
         </TBody>
     </TABLE>
 
