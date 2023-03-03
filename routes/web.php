@@ -3,11 +3,14 @@
 use App\Http\Controllers\Admin\PlatController as AdminPlatController;
 use App\Http\Controllers\Admin\ReservationController as AdminReservationController;
 use App\Http\Controllers\Admin\ActuController as AdminActuController;
+use App\Http\Controllers\Admin\CategorieController as AdminCategorieController;
 use App\Http\Controllers\Admin\Photo_platController as AdminPhoto_platController;
+
 
 
 use App\Http\Controllers\Photo_platController;
 use App\Http\Controllers\ActuController;
+use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
@@ -96,6 +99,21 @@ Route::put('/admin/photo_plat/{id}', [AdminPhoto_platController::class,
 
 Route::delete('/admin/photo_plat/{id}',[AdminPhoto_platController::class,'delete'])->middleware('auth')->name('admin.photo_plat.delete');
 
+// CRUD Categorie
+
+
+Route::get('/admin/categorie', [AdminCategorieController::class,
+'index'])->middleware('auth')->name('admin.categorie.index');
+
+Route::get('/admin/categorie/create',[AdminCategorieController::class,'create'])->middleware('auth')->name('admin.categorie.create');
+Route::post('/admin/categorie',[AdminCategorieController::class,'store'])->middleware('auth')->name('admin.categorie.store');
+
+Route::get('/admin/categorie/{id}/edit', [AdminCategorieController::class,
+'edit'])->middleware('auth')->name('admin.categorie.edit');
+Route::put('/admin/categorie/{id}', [AdminCategorieController::class,
+'update'])->middleware('auth')->name('admin.categorie.update');
+
+Route::delete('/admin/categorie/{id}',[AdminCategorieController::class,'delete'])->middleware('auth')->name('admin.categorie.delete');
 
 
 
