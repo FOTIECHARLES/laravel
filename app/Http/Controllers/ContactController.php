@@ -35,11 +35,13 @@ class ContactController extends Controller
         ;
         
         return view('contact', [
-            'adresse'=> $adresse->valeur,
+            'adresse' => $adresse->valeur,
             'tel' => $tel->valeur,
             'horaire' => $horaire->valeur,
             'carte' => $carte->valeur,
         ]);
     }
 }
+
+
    
