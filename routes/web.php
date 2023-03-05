@@ -35,6 +35,11 @@ use Illuminate\Support\Facades\Route;
 
 // routes du front office
 
+//Restaurant
+
+Route::get('/restaurant', [RestaurantController::class,'index'])->middleware('auth')->name('restaurant');
+
+
 // page d'accueil
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
