@@ -5,10 +5,11 @@ use App\Http\Controllers\Admin\ReservationController as AdminReservationControll
 use App\Http\Controllers\Admin\EtiquetteController as AdminEtiquetteController;
 use App\Http\Controllers\Admin\ActuController as AdminActuController;
 use App\Http\Controllers\Admin\CategorieController as AdminCategorieController;
+use App\Http\Controllers\Admin\Photo_ambianceController as AdminPhotoAmbianceController;
 use App\Http\Controllers\Admin\Photo_platController as AdminPhoto_platController;
 
-
-
+use App\Http\Controllers\RestaurantController;
+use App\Http\Controllers\Admin\Photo_ambianceController;
 use App\Http\Controllers\Photo_platController;
 use App\Http\Controllers\ActuController;
 use App\Http\Controllers\CategorieController;
@@ -116,6 +117,22 @@ Route::put('/admin/categorie/{id}', [AdminCategorieController::class,
 'update'])->middleware('auth')->name('admin.categorie.update');
 
 Route::delete('/admin/categorie/{id}',[AdminCategorieController::class,'delete'])->middleware('auth')->name('admin.categorie.delete');
+
+// CRUD PhotoAmbiance
+
+
+Route::get('/admin/photo_ambiance', [AdminPhotoAmbianceController::class,
+'index'])->middleware('auth')->name('admin.photo_ambiance.index');
+
+Route::get('/admin/photo_ambiance/create',[AdminPhotoAmbianceController::class,'create'])->middleware('auth')->name('admin.photo_ambiance.create');
+Route::post('/admin/photo_ambiance',[AdminPhotoAmbianceController::class,'store'])->middleware('auth')->name('admin.photo_ambiance.store');
+
+Route::get('/admin/photo_ambiance/{id}/edit', [AdminPhotoAmbianceController::class,
+'edit'])->middleware('auth')->name('admin.photo_ambiance.edit');
+Route::put('/admin/photo_ambiance/{id}', [AdminPhotoAmbianceController::class,
+'update'])->middleware('auth')->name('admin.photo_ambiance.update');
+
+Route::delete('/admin/photo_ambiance/{id}',[AdminPhotoAmbianceController::class,'delete'])->middleware('auth')->name('admin.photo_ambiance.delete');
 
 // CRUD Etiquette
 
