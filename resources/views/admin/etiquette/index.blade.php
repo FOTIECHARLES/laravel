@@ -11,16 +11,14 @@
     {{ Session::get('confirmation') }}
 </div>
 @endif   
-    <div>
-        <a href="{{ route('admin.etiquette.create')}}">Ajouter</a>
-    </div>
-
+    
 {{-- {{dump($etiquettes)}} --}}
 <TABLE>
     <TBody> 
         <tr>
-      <th>Nom</th>
-      <th>Description</th>
+      <th id="etiquette">Nom</th>
+      <th id="etiquette">Description</th>
+      <th id="etiquette"> <a href="{{ route('admin.etiquette.create')}}">Ajouter</a></th>
         <tr>
             @foreach($etiquettes as $etiquette)
             <TR>   

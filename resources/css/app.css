@@ -68,3 +68,44 @@ img.medium-size{
 .admin-liste-img2{
     width: 100px;
 }
+
+#categorie {
+    border-style:solid;
+    border-color: black;
+    border-width: 2px;
+}
+#actu{
+    border-style:solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+#photo_plat{
+    border-style:solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+#reservation{
+    border-style:solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+#etiquette{
+    border-style:solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+#photoambiance{
+    border-style:solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+#plat{
+    border-style:solid;
+    border-color: black;
+    border-width: 2px;
+}

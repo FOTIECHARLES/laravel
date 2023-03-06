@@ -10,17 +10,18 @@
     {{ Session::get('confirmation') }}
 </div>
 @endif   
-    <div>
-        <a href="{{ route('admin.actu.index')}}">Ajouter</a>
-    </div>
 
 {{-- {{dump($actu)}} --}}
 <TABLE>
     <TBody> 
         <tr>
-      <th>jour_publication</th>
-      <th>heure_publication</th>
-      <th>texte</th>
+      <th id="actu">jour_publication</th>
+      <th id="actu">heure_publication</th>
+      <th id="actu">texte</th>
+      <th id="actu"> <div>
+        <a href="{{ route('admin.actu.index')}}">Ajouter</a>
+    </div></th>
+     
         <tr>
             @foreach($actus as $actu)
             <TR>   

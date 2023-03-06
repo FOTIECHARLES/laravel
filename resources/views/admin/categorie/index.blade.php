@@ -12,32 +12,33 @@
     {{ Session::get('confirmation') }}
 </div>
 @endif   
-    <div>
-        <a href="{{ route('admin.categorie.create')}}">Ajouter</a>
-    </div>
 
 {{-- {{dump($categories)}} --}}
-<TABLE>
-    <TBody> 
+<table>
+    <thead> 
         <tr>
-      <th>Nom</th>
-      <th>Description</th>
-        <tr>
-
+      <th id="categorie">Nom</th>
+      <th id="categorie">Description</th>
+      <th id="categorie"><div>
+        <a href="{{ route('admin.categorie.create')}}">Ajouter</a>
+    </div></th>
+        </tr>
+        </thead>
+    <tbody>
             @foreach($categories as $categorie)
-            <TR>   
-                <TD>{{ $categorie->nom }} </TD>   
-                <TD>{{ $categorie->description }} </TD>
-                <TD><a href="{{ route( 'admin.categorie.edit', ['id' => $categorie->id])}}">modifier</a>
+            <tr>   
+                <td>{{ $categorie->nom }} </td>   
+                <td>{{ $categorie->description }} </td>
+                <td><a href="{{ route( 'admin.categorie.edit', ['id' => $categorie->id])}}">modifier</a>
                 <form action="{{ route('admin.categorie.delete',['id' => $categorie->id]) }}" method="post"onsubmit="return window.confirm('êtes vous sur de vouloir supprimer cet élement?');">
                 @csrf
                 @method('DELETE')
                 <button type="submit">supprimer</button></form>
-                </TD>
-            </TR>
+                </td>
+            </tr>
             @endforeach
-        </TBody>
-    </TABLE>
+        </tbody>
+    </table>
 
 @endsection
 

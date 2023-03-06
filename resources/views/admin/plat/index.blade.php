@@ -10,18 +10,16 @@
     {{ Session::get('confirmation') }}
 </div>
 @endif   
-    <div>
-        <a href="{{ route('admin.plat.create')}}">Ajouter</a>
-    </div>
 
 {{-- {{dump($plats)}} --}}
 <TABLE>
     <TBody> 
         <tr>
-      <th>Nom</th>
-      <th>Prix</th>
-      <th>Description</th>
-      <th>Epinglé</th>
+      <th id="plat">Nom</th>
+      <th id="plat">Prix</th>
+      <th id="plat">Description</th>
+      <th id="plat">Epinglé</th>
+      <th id="plat"><a href="{{ route('admin.plat.create')}}">Ajouter</a></th>
         <tr>
 
             @foreach($plats as $plat)

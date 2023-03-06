@@ -11,39 +11,37 @@
     {{ Session::get('confirmation') }}
 </div>
 @endif   
-    <div>
-        <a href="{{ route('admin.reservation.create')}}">Ajouter</a>
-    </div>
 
 {{-- {{dump($reservations)}} --}}
 <TABLE>
     <TBody> 
         <tr>
-      <th>Nom</th>
-      <th>Prenom</th>
-      <th>Jour</th>
-      <th>Heure</th>
-      <th>Nombre de Personne</th>
-      <th> tel </th>
-      <th>Email </th>
-      <th>actions</th>
+      <th id="reservation">Nom</th>
+      <th id="reservation">Prenom</th>
+      <th id="reservation">Jour</th>
+      <th id="reservation">Heure</th>
+      <th id="reservation">Nombre de Personne</th>
+      <th id="reservation"> tel </th>
+      <th id="reservation">Email </th>
+      <th id="reservation">actions</th>
         <tr>
 
             @foreach($reservations as $reservation)
             <TR>   
-                <TD>{{ $reservation->nom }} </TD>   
-                <TD>{{ $reservation->prenom }} </TD>
-                <TD>{{ $reservation->jour }} </TD>
-                <TD>{{ $reservation->heure }} </TD> 
-                <TD>{{ $reservation->nombre_personnes }} </TD>
-                <TD>{{ $reservation->tel  }} </TD>
-                <TD>{{ $reservation->email  }} </TD>
-                <TD><a href="{{ route( 'admin.reservation.edit', ['id' => $reservation->id])}}">modifier</a>
+                <td>{{ $reservation->nom }} </td>   
+                <td>{{ $reservation->prenom }} </td>
+                <td>{{ $reservation->jour }} </td>
+                <td>{{ $reservation->heure }} </td> 
+                <td>{{ $reservation->nombre_personnes }} </td>
+                <td>{{ $reservation->tel  }} </td>
+                <td>{{ $reservation->email  }} </td>
+                <td><a href="{{ route('admin.reservation.create')}}">Ajouter</a>
+                    <a href="{{ route( 'admin.reservation.edit', ['id' => $reservation->id])}}">modifier</a>
                 <form action="{{ route('admin.reservation.delete',['id' => $reservation->id]) }}" method="post"onsubmit="return window.confirm('êtes vous sur de vouloir supprimer cet élement?');">
                 @csrf
                 @method('DELETE')
                 <button type="submit">supprimer</button></form>
-                </TD>
+                </td>
             </TR>
             @endforeach
         </TBody>

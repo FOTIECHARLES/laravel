@@ -11,18 +11,17 @@
     {{ Session::get('confirmation') }}
 </div>
 @endif   
-    <div>
-        <a href="{{ route('admin.photo_ambiance.create')}}">Ajouter</a>
-    </div>
 
 {{-- {{dump($photo_ambiances)}} --}}
 <table>
     <tbody> 
         <tr>
-      <th>CHEMIN</th>
-      <th>PHOTO</th>
-      <th>ORDRE</th>
-      <th>lEGENDE</th>
+      <th id="photoambiance">CHEMIN</th>
+      <th id="photoambiance">PHOTO</th>
+      <th id="photoambiance">ORDRE</th>
+      <th id="photoambiance">LEGENDE</th>
+      <th id="photoambiance">
+        <a href="{{ route('admin.photo_ambiance.create')}}">Ajouter</a></th>
         <tr>
 
             @foreach($photo_ambiances as $photo_ambiance)
