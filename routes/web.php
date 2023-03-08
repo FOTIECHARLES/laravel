@@ -46,15 +46,17 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/hello/{name}',[HelloController::class,'index'])->name('hello');
 
-// @todo creer les routes pour les pages Menu, Contact et reservation
-
 Route::get('/menu',[MenuController::class, 'index'])->name('menu');
 
 Route::get('/contact',[ContactController::class, 'index'])->name('contact');
 
-Route::get('/reservation', function () {
-    return view('reservation');
-})->name('reservation');
+Route::get('/actu', [ActuController::class,'index'])->name('actu');
+
+// Route::get('/reservation', function () {
+//     return view('reservation');
+// })->name('reservation');
+Route::get('/reservation', [ReservationController::class,'index'])->name('reservation');
+Route::post('/reservation', [ReservationController::class,'store'])->name('reservation');
 
 Route::get('/mention-legales', function () {
     return view('mentions-legales');
