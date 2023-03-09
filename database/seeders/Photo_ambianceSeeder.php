@@ -18,12 +18,12 @@ class Photo_ambianceSeeder extends Seeder
 
         $photoDatas = [
             [
-                'chemin'=>'img/ambiance/alex-haney-CAhjZmVk5H4-unsplash(1).jpg',
+                'chemin'=>'img/ambiance/pexels-picha-6210449.jpg',
                 'ordre'=> 0,
                 'legende'=>'',
             ],
             [
-                'chemin'=>'img/ambiance/ben-moreland-8wWpDF4Av-Y-unsplash.jpg',
+                'chemin'=>'img/ambiance/pexels-picha-6210433.jpg',
                 'ordre'=> 0,
                 'legende'=>'',
             ],

@@ -18,7 +18,6 @@ class Photo_platSeeder extends Seeder
 
         $photoDatas = [
             "img/plats/rix_sauce_tomate.jpg",
-            "img/plats/pexels-antony-trivet-13354199.jpg",
             "img/plats/pistache_avec_tubercule_de_manioc.jpg",
             "img/plats/pistache_avec_tubercule_de_manioc_image2.jpg",
             "img/plats/poulet_braisé.jpg",
