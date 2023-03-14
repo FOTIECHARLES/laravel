@@ -6,5 +6,5 @@
 @section('content')
 
 <h1>Bienvenue Chez Ocnamo !</h1>
-    <div class="banner" style="background-image: url('{{asset('/img/ambiance/alex-haney-CAhjZmVk5H4-unsplash(1).jpg')}}')"></div>
+    <div class="banner" style="background-image: url('{{asset('/img/ambiance/pexels-picha-6210433.jpg')}}')"></div>
 @endsection

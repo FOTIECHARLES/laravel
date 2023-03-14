@@ -23,7 +23,8 @@
     @csrf
     </div>
     <div>
-        <input class=" @error('chemin ') form--input--error @enderror"type="text" name="chemin " id=""value="{{ old('chemin ', $photo_ambiance->chemin ) }}">
+        <label for="chemin">Chemin</label>
+        <input class=" @error('chemin') form--input--error @enderror"type="text" name="chemin" id=""value="{{ old('chemin', $photo_ambiance->chemin ) }}">
         @error('chemin ')
             <div class="form--error-message">
             {{ $message }}
@@ -31,6 +32,7 @@
         @enderror
     </div>
     <div>
+        <label for="ordre">Ordre</label>
         <input class=" @error('ordre') form--input--error @enderror"type="number" name="ordre" id=""value="{{ old('ordre', $photo_ambiance->ordre) }}">
         @error('ordre')
             <div class="form--error-message">
@@ -39,6 +41,7 @@
         @enderror
     </div>
     <div>
+        <label for="legende">Légende</label>
         <input class=" @error('legende ') form--input--error @enderror"type="text" name="legende " id=""value="{{ old('legende ', $photo_ambiance->legende ) }}">
         @error('legende ')
         <div class="form--error-message">

@@ -11,7 +11,6 @@
     
 <p>{{ $adresse }}</p>
 <p>{{$tel}}     </p>
-<p>{{$horaire}} </p>
 <p>{!!$carte!!} </p>
 
 @endsection

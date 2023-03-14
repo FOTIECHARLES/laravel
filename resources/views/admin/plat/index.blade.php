@@ -24,16 +24,16 @@
 
             @foreach($plats as $plat)
             <TR>   
-                <TD>{{ $plat->nom  }} </TD>   
-                <TD>{{ $plat->prix  }} </TD>
-                <TD>{{ $plat->description  }} </TD>
-                <TD>{{ $plat->epingle  }} </TD> 
-                <TD><a href="{{ route( 'admin.plat.edit', ['id' => $plat->id])}}">modifier</a> 
+                <td>{{ $plat->nom  }} </td>   
+                <td>{{ $plat->prix  }} </td>
+                <td>{{ $plat->description  }} </td>
+                <td>{{ $plat->epingle  }} </td> 
+                <td><a href="{{ route( 'admin.plat.edit', ['id' => $plat->id])}}">modifier</a> 
                 <form action="{{ route('admin.plat.delete',['id' => $plat->id]) }}" method="post"onsubmit="return window.confirm('êtes vous sur de vouloir supprimer cet élement?');">
                 @csrf
                 @method('DELETE') 
                 <button type="submit">supprimer</button></form>
-                </TD>
+                </td>
             </TR>
             @endforeach
         </TBody>

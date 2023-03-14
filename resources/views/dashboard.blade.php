@@ -7,7 +7,6 @@
 <nav class="Dashbord">   
     <ul>
         @auth
-        <li><a href="{{ route('dashboard') }}">Tableau de bord</a></li>
         <li><a href="{{ route('admin.reservation.index') }}">Réservation </a></li>
         <li><a href="{{ route('admin.actu.index') }}">Actualité </a></li>
         <li><a href="{{ route('admin.etiquette.index') }}">Etiquette </a></li>

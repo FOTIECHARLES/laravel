@@ -44,12 +44,12 @@
             </select>
         </div> 
         <div class="form--radio-buttons--scrollable">  
-        @foreach ($photoPlats as $photoPlat )
+        @foreach ($photo_plats as $photo_plat )
         <div>
-        <input type="radio" name="photo_plat_id" id="photo_plat_id_{{ $photoPlat->id }}" value="{{ $photoPlat->id }}">
-        <label for="photo_plat_id_{{ $photoPlat->id }}">
-            <img class="form--radio-button-image" src="{{ asset($photoPlat->chemin) }}" alt="photo {{ $photoPlat->id }}">
-                    <span>photo {{ $photoPlat->id }}</span>
+        <input type="radio" name="photo_plat_id" id="photo_plat_id_{{ $photo_plat->id }}" value="{{ $photo_plat->id }}">
+        <label for="photo_plat_id_{{ $photo_plat->id }}">
+            <img class="form--radio-button-image" src="{{ asset($photo_plat->chemin) }}" alt="photo {{ $photo_plat->id }}">
+                    <span>photo {{ $photo_plat->id }}</span>
                 </label>
             </div>
             @endforeach

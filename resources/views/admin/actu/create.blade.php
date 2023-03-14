@@ -21,7 +21,8 @@
         @csrf
         </div>
         <div>
-        <input class=" @error('jour_publication') form--input--error @enderror"type="datetime" name="jour_publication" id="" value="{{ old('jour_publication', $actu->jour_publication) }}">
+        <label>jour_publication</label>
+        <input class=" @error('jour_publication') form--input--error @enderror"type="date" name="jour_publication" id="" value="{{ old('jour_publication', $actu->jour_publication) }}">
         @error('jour_publication')
             <div class="form--error-message">
             {{ $message }}
@@ -29,14 +30,16 @@
         @enderror
         </div>
         <div>
-        <input class=" @error('heure_publication') form--input--error @enderror"type="time" name="heure_publication " id="" value="{{ old('heure_publication', $actu->heure_publication) }}">
+        <label>Heure_publication</label>
+        <input class=" @error('heure_publication') form--input--error @enderror"type="datetime" name="heure_publication" id="" value="{{ old('heure_publication', $actu->heure_publication) }}">
         @error('heure_publication')
             <div class="form--error-message">
-            {{ $message }}
+            Veuillez saisir une heure valide!
             </div>
         @enderror
         </div>
         <div>
+        <label>texte</label>
         <input class=" @error('texte') form--input--error @enderror"type="text" name="texte" id=""value="{{ old('texte', $actu->texte) }}">
         @error('texte')
         <div class="form--error-message">

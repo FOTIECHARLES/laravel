@@ -23,6 +23,7 @@
     @csrf
     </div>
     <div>
+        <label for="nom">Nom</label>
         <input class=" @error('nom') form--input--error @enderror"type="text" name="nom" id=""value="{{ old('nom', $categorie->nom) }}">
         @error('nom')
             <div class="form--error-message">
@@ -31,6 +32,7 @@
         @enderror
     </div>
     <div>
+        <label for="description">Description</label>
         <input class=" @error('description') form--input--error @enderror"type="text" name="description" id=""value="{{ old('description', $categorie->description) }}">
         @error('description')
             <div class="form--error-message">

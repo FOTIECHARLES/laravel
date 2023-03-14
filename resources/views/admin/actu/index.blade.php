@@ -15,12 +15,10 @@
 <TABLE>
     <TBody> 
         <tr>
-      <th id="actu">jour_publication</th>
-      <th id="actu">heure_publication</th>
-      <th id="actu">texte</th>
-      <th id="actu"> <div>
-        <a href="{{ route('admin.actu.index')}}">Ajouter</a>
-    </div></th>
+      <th class="admin-actu-tableau">jour_publication</th>
+      <th class="admin-actu-tableau">heure_publication</th>
+      <th class="admin-actu-tableau">texte</th>
+      <th class="admin-actu-tableau"> <div><a href="{{ route('admin.actu.create')}}">Ajouter</a></div></th>
      
         <tr>
             @foreach($actus as $actu)

@@ -13,10 +13,19 @@
 <header>
     <nav>   
         <ul>
-            <li><a href="{{route('home')}}">Accueil</a></li>
-            <li><a href="{{route('menu')}}">Menu</a></li>
-            <li><a href="{{route('contact')}}">Contact</a></li>
-            <li><a href="{{route('reservation')}}">Réservation</a></li>
+            @auth
+            <li><a href="{{ route('dashboard') }}">Tableau de bord</a></li>
+        @else
+            <li><a href="{{ route('home') }}">Accueil</a></li>
+            <li><a href="{{ route('menu') }}">Menu</a></li>
+            <li><a href="{{ route('contact') }}">Contact</a></li>
+            <li><a href="{{ route('reservation') }}">Réservation</a></li>
+            <li><a href="{{ route('actu') }}">Actualité</a></li>
+            <li><a href="{{ route('restaurant') }}">Restaurant</a></li>
+            @guest
+                <li><a href="{{ route('login') }}">Connexion</a></li>
+            @endguest  
+        @endauth
         </ul>    
    </nav>
 </header>  

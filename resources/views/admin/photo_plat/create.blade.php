@@ -21,7 +21,8 @@
     @csrf
     </div>
     <div>
-        <input class=" @error('photo_plat') form--input--error @enderror"type="text" name="photo_plat" id=""value="{{ old('photo_plat', $photo_plat->chemin) }}">
+        <label for="chemin">Chemin</label>
+        <input class=" @error('chemin') form--input--error @enderror"type="text" name="photo_plat" id=""value="{{ old('chemin', $photo_plat->chemin) }}">
         @error('chemin')
             <div class="form--error-message">
             {{ $message }}

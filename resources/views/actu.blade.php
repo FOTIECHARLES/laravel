@@ -8,7 +8,7 @@
 
 
 {{-- {{dump($actu)}} --}}
-<table>
+<table class="admin-actu-tab">
     <tbody> 
         <tr>
       <th class="admin-actu-tableau">jour_publication</th>

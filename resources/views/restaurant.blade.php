@@ -8,10 +8,6 @@
 <h1>Restaurant </h1>
 <table>
     <TBody> 
-        <tr>
-      <th>CLE</th>
-      <th>VALEUR</th>
-        <tr>
 
             @foreach($restaurants as $restaurant)
             <TR>   
