@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             RestaurantSeeder::class,
             UsersSeeder::class,
             Photo_ambianceSeeder::class,
+            DashboardSeeder::class,
         ]);
     }
 }

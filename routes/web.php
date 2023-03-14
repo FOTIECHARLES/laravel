@@ -7,19 +7,21 @@ use App\Http\Controllers\Admin\ActuController as AdminActuController;
 use App\Http\Controllers\Admin\CategorieController as AdminCategorieController;
 use App\Http\Controllers\Admin\Photo_ambianceController as AdminPhotoAmbianceController;
 use App\Http\Controllers\Admin\Photo_platController as AdminPhoto_platController;
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 
 use App\Http\Controllers\RestaurantController;
-use App\Http\Controllers\Admin\Photo_ambianceController;
+use App\Http\Controllers\Photo_ambianceController;
 use App\Http\Controllers\Photo_platController;
 use App\Http\Controllers\ActuController;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\ReservationController;
-use App\Http\Controllers\Admin\EtiquetteController;
+use App\Http\Controllers\EtiquetteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -164,17 +166,18 @@ Route::get('/admin/reservation', [AdminReservationController::class,
 'index'])->middleware('auth')->name('admin.reservation.index');
 
 
-Route::get('/admin/reservation/create', [AdminReservationController::class,
-'create'])->middleware('auth')->name('admin.reservation.create');
-Route::post('/admin/reservation', [AdminReservationController::class,
-'store'])->middleware('auth')->name('admin.reservation.store');
+Route::get('/admin/reservation/create', [AdminReservationController::class,'create'])->middleware('auth')->name('admin.reservation.create');
+Route::post('/admin/reservation', [AdminReservationController::class,'store'])->middleware('auth')->name('admin.reservation.store');
 
-Route::get('/admin/reservation/{id}/edit', [AdminReservationController::class,
-'edit'])->middleware('auth')->name('admin.reservation.edit');
-Route::put('/admin/reservation/{id}', [AdminReservationController::class,
-'update'])->middleware('auth')->name('admin.reservation.update');
+Route::get('/admin/reservation/{id}/edit', [AdminReservationController::class,'edit'])->middleware('auth')->name('admin.reservation.edit');
+Route::put('/admin/reservation/{id}', [AdminReservationController::class,'update'])->middleware('auth')->name('admin.reservation.update');
 
 Route::delete('/admin/reservation/{id}',[AdminReservationController::class,'delete'])->middleware('auth')->name('admin.reservation.delete');
+
+// Dashboard
+
+Route::get('/admin/dashboard', [AdminDashboardController::class,'index'])->middleware('auth')->name('admin.dashboard');
+
 
 //routes de breeze
 Route::get('/dashboard', function () {

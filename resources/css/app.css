@@ -4,9 +4,18 @@
 
 /**ceci est un commentaire*/
 
+.Dashbord{
+
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+
 body {
      background-color:lightseagreen;
 }
+
 
 header nav ul { 
     display: flex;
@@ -14,6 +23,7 @@ header nav ul {
     list-style: none;   
     padding:0;
     margin:1rem ;
+    
 }
 
 header nav ul a{
