@@ -39,7 +39,7 @@ use Illuminate\Support\Facades\Route;
 
 //Restaurant
 
-Route::get('/restaurant', [RestaurantController::class,'index'])->middleware('auth')->name('restaurant');
+Route::get('/restaurant', [RestaurantController::class,'index'])->name('restaurant');
 
 
 // page d'accueil
@@ -57,8 +57,10 @@ Route::get('/actu', [ActuController::class,'index'])->name('actu');
 // Route::get('/reservation', function () {
 //     return view('reservation');
 // })->name('reservation');
+
 Route::get('/reservation', [ReservationController::class,'index'])->name('reservation');
 Route::post('/reservation', [ReservationController::class,'store'])->name('reservation');
+
 
 Route::get('/mention-legales', function () {
     return view('mentions-legales');
@@ -72,10 +74,8 @@ Route::get('/admin/actu', [AdminActuController::class,'index'])->middleware('aut
 Route::get('/admin/actu/create',[AdminActuController::class,'create'])->middleware('auth')->name('admin.actu.create');
 Route::post('/admin/actu',[AdminActuController::class,'store'])->middleware('auth')->name('admin.actu.store');
 
-Route::get('/admin/actu/{id}/edit', [AdminActuController::class,
-'edit'])->middleware('auth')->name('admin.actu.edit');
-Route::put('/admin/actu/{id}', [AdminActuController::class,
-'update'])->middleware('auth')->name('admin.actu.update');
+Route::get('/admin/actu/{id}/edit', [AdminActuController::class,'edit'])->middleware('auth')->name('admin.actu.edit');
+Route::put('/admin/actu/{id}', [AdminActuController::class,'update'])->middleware('auth')->name('admin.actu.update');
 
 Route::delete('/admin/actu/{id}',[AdminActuController::class,'delete'])->middleware('auth')->name('admin.actu.delete');
 
@@ -88,10 +88,8 @@ Route::get('/admin/plat', [AdminPlatController::class,
 Route::get('/admin/plat/create',[AdminPlatController::class,'create'])->middleware('auth')->name('admin.plat.create');
 Route::post('/admin/plat',[AdminPlatController::class,'store'])->middleware('auth')->name('admin.plat.store');
 
-Route::get('/admin/plat/{id}/edit', [AdminPlatController::class,
-'edit'])->middleware('auth')->name('admin.plat.edit');
-Route::put('/admin/plat/{id}', [AdminPlatController::class,
-'update'])->middleware('auth')->name('admin.plat.update');
+Route::get('/admin/plat/{id}/edit', [AdminPlatController::class,'edit'])->middleware('auth')->name('admin.plat.edit');
+Route::put('/admin/plat/{id}', [AdminPlatController::class,'update'])->middleware('auth')->name('admin.plat.update');
 
 Route::delete('/admin/plat/{id}',[AdminPlatController::class,'delete'])->middleware('auth')->name('admin.plat.delete');
 
@@ -104,15 +102,12 @@ Route::get('/admin/photo_plat', [AdminPhoto_platController::class,
 Route::get('/admin/photo_plat/create',[AdminPhoto_platController::class,'create'])->middleware('auth')->name('admin.photo_plat.create');
 Route::post('/admin/photo_plat',[AdminPhoto_platController::class,'store'])->middleware('auth')->name('admin.photo_plat.store');
 
-Route::get('/admin/photo_plat/{id}/edit', [AdminPhoto_platController::class,
-'edit'])->middleware('auth')->name('admin.photo_plat.edit');
-Route::put('/admin/photo_plat/{id}', [AdminPhoto_platController::class,
-'update'])->middleware('auth')->name('admin.photo_plat.update');
+Route::get('/admin/photo_plat/{id}/edit', [AdminPhoto_platController::class,'edit'])->middleware('auth')->name('admin.photo_plat.edit');
+Route::put('/admin/photo_plat/{id}', [AdminPhoto_platController::class,'update'])->middleware('auth')->name('admin.photo_plat.update');
 
 Route::delete('/admin/photo_plat/{id}',[AdminPhoto_platController::class,'delete'])->middleware('auth')->name('admin.photo_plat.delete');
 
 // CRUD Categorie
-
 
 Route::get('/admin/categorie', [AdminCategorieController::class,
 'index'])->middleware('auth')->name('admin.categorie.index');
@@ -120,10 +115,8 @@ Route::get('/admin/categorie', [AdminCategorieController::class,
 Route::get('/admin/categorie/create',[AdminCategorieController::class,'create'])->middleware('auth')->name('admin.categorie.create');
 Route::post('/admin/categorie',[AdminCategorieController::class,'store'])->middleware('auth')->name('admin.categorie.store');
 
-Route::get('/admin/categorie/{id}/edit', [AdminCategorieController::class,
-'edit'])->middleware('auth')->name('admin.categorie.edit');
-Route::put('/admin/categorie/{id}', [AdminCategorieController::class,
-'update'])->middleware('auth')->name('admin.categorie.update');
+Route::get('/admin/categorie/{id}/edit', [AdminCategorieController::class,'edit'])->middleware('auth')->name('admin.categorie.edit');
+Route::put('/admin/categorie/{id}', [AdminCategorieController::class,'update'])->middleware('auth')->name('admin.categorie.update');
 
 Route::delete('/admin/categorie/{id}',[AdminCategorieController::class,'delete'])->middleware('auth')->name('admin.categorie.delete');
 
@@ -136,10 +129,8 @@ Route::get('/admin/photo_ambiance', [AdminPhotoAmbianceController::class,
 Route::get('/admin/photo_ambiance/create',[AdminPhotoAmbianceController::class,'create'])->middleware('auth')->name('admin.photo_ambiance.create');
 Route::post('/admin/photo_ambiance',[AdminPhotoAmbianceController::class,'store'])->middleware('auth')->name('admin.photo_ambiance.store');
 
-Route::get('/admin/photo_ambiance/{id}/edit', [AdminPhotoAmbianceController::class,
-'edit'])->middleware('auth')->name('admin.photo_ambiance.edit');
-Route::put('/admin/photo_ambiance/{id}', [AdminPhotoAmbianceController::class,
-'update'])->middleware('auth')->name('admin.photo_ambiance.update');
+Route::get('/admin/photo_ambiance/{id}/edit', [AdminPhotoAmbianceController::class,'edit'])->middleware('auth')->name('admin.photo_ambiance.edit');
+Route::put('/admin/photo_ambiance/{id}', [AdminPhotoAmbianceController::class,'update'])->middleware('auth')->name('admin.photo_ambiance.update');
 
 Route::delete('/admin/photo_ambiance/{id}',[AdminPhotoAmbianceController::class,'delete'])->middleware('auth')->name('admin.photo_ambiance.delete');
 
@@ -152,10 +143,8 @@ Route::get('/admin/etiquette', [AdminEtiquetteController::class,
 Route::get('/admin/etiquette/create',[AdminEtiquetteController::class,'create'])->middleware('auth')->name('admin.etiquette.create');
 Route::post('/admin/etiquette',[AdminEtiquetteController::class,'store'])->middleware('auth')->name('admin.etiquette.store');
 
-Route::get('/admin/etiquette/{id}/edit', [AdminEtiquetteController::class,
-'edit'])->middleware('auth')->name('admin.etiquette.edit');
-Route::put('/admin/etiquette/{id}', [AdminEtiquetteController::class,
-'update'])->middleware('auth')->name('admin.etiquette.update');
+Route::get('/admin/etiquette/{id}/edit', [AdminEtiquetteController::class,'edit'])->middleware('auth')->name('admin.etiquette.edit');
+Route::put('/admin/etiquette/{id}', [AdminEtiquetteController::class,'update'])->middleware('auth')->name('admin.etiquette.update');
 
 Route::delete('/admin/etiquette/{id}',[AdminEtiquetteController::class,'delete'])->middleware('auth')->name('admin.etiquette.delete');
 

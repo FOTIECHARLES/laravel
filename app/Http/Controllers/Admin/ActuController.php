@@ -31,7 +31,7 @@ class ActuController extends Controller
     $actu = new stdClass;
     
     $actu->jour_publication = '';
-    $actu->heure_publication = '13:00';
+    $actu->heure_publication = '20:00';
     $actu->texte  ='';
     
     //transmission des valeurs par défaut à la vue
@@ -58,7 +58,7 @@ class ActuController extends Controller
 
 
         //création d'une actualité dans la bdd
-        $actu = new Actu;
+        $actu = new Actu; 
     
         $actu->jour_publication =$request->get('jour_publication');
         $actu->heure_publication =$request->get('heure_publication');
