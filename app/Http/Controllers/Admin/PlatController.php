@@ -32,7 +32,7 @@ class PlatController extends Controller
     {   
         $categories = Categorie::all();
         $etiquettes = Etiquette::all();
-        $photoPlats = PhotoPlat::all();
+        $photo_plats = Photo_Plat::all();
 
         return view('admin.plat.create',[
             'categories' => $categories,
@@ -61,6 +61,7 @@ class PlatController extends Controller
         
         //création d'un plat dans la bdd
         $plat = new Plat;
+        //  $etiquette = new Etiquette;
         
         $plat->nom =$request->get('nom');
         $plat->prix =$request->get('prix');
@@ -69,7 +70,7 @@ class PlatController extends Controller
         $plat->photo_plat_id =$request->get('photo_plat_id', false);
         $plat->categorie_id =$request->get('categorie_id', false);
         $plat->save();
-        
+        // $etiquette->save()
 
         $request->session()->flash('confirmation','La création a bien été effectuée.');
 

@@ -119,7 +119,7 @@ class PlatSeeder extends Seeder
             
              
        }
-        for($i = 0; $i < 100; $i++){
+        for($i = 0; $i <10; $i++){
             //création  d'un nouveau plat
             $plat = new Plat();
             // affectation d'un nom

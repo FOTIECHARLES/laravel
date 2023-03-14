@@ -14,23 +14,23 @@ class Categorie extends Model
     protected $primaryKey = 'id';
    
    /**
-    * Cette fonction permet de récupérer les plats 
-    *
-    * @return Plat
-    */
+   * Cette fonction permet de récupérer les plats dans l'ordre alphabétique des noms
+   *
+   * @return Plat
+   */
     public function platsSorteByNom()
    {
       return $this->hasMany(Plat::class)
         ->orderBy ('nom','asc')
     ;
     }
-   /**
-    * Cette fonction permet de récupérer les plats dans l'ordre alphébétique des noms
-    * 
-    * @return Plat
-    */
+    /**
+     * Cette fonction permet de récupérer les plats dans l'ordre ascendant des prix
+     *
+     * @return Plat
+     */
     public function platsSorteByPrix()
-   {
+    {
       return $this->hasMany(Plat::class)
         ->orderBy('prix','asc')
         ;
