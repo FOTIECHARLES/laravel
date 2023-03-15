@@ -36,7 +36,9 @@ Pour voir la page d'accueil,ouvrez : [Accueil](http://127.0.0.1:8000)
 
 Les images suivantes ont été utilisées :
 
-[woman in white shirt eating photo – Free Image on Unsplash](https://unsplash.com/photos/CAhjZmVk5H4)
+[uomo che taglia i guanti d'aglio photo – Photo Restaurant Gratuite sur Unsplash](https://unsplash.com/fr/photos/5JeTin55H9U)
+
+[Personne Tenant Un Bol En Verre Transparent Avec De La Nourriture · Photo gratuite](https://www.pexels.com/fr-fr/photo/personne-tenant-un-bol-en-verre-transparent-avec-de-la-nourriture-6210433/)
 
 
 
@@ -51,7 +53,6 @@ Les images suivantes ont été utilisées :
 - wamp
 - vs code (un editeur de code...)
 - cmd
-
 ## Installation
 
 
