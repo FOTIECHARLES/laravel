@@ -54,5 +54,5 @@ Maintenant dans votre terminal tapez la commande `bin/db-build.sh`pour reconstru
 
 Maintenant vous pouvez rafraîchir votre page localhost et voir des données apparaître dans la bdd laravel.
 
-Dans votre éditeur de code (Vs code...) ouver deux terminaux, dans le premier tapez la commande`php artisan serve` et dans le second terminal tapez la commande `npm run dev`.
+Dans votre éditeur de code (Vs code...) ouvrez deux terminaux, dans le premier tapez la commande`php artisan serve` et dans le second terminal tapez la commande `npm run dev`.
 Pour voir la page d'accueil,ouvrez : [Accueil](http://127.0.0.1:8000)
