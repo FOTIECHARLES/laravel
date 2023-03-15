@@ -48,7 +48,7 @@ Veuillez ouvrir le dossier du projet qui vient d'être cloné avec votre éditeu
 
 -Puis une fois que c'est fait, téléchargez les dépendances avec `composer install`puis `npm install`
 
-Maintenant à l'intérieur de votre cmd !, et non votre éditeur de code(vs code); tapez la commande`copy .env.example .env` une fois que c'est fait veuillez ouvrir phpMyadmin et vous connecter avec votre compte. Puis appuyez sur [Nouvelle base de données] , nommée la: laravel; et juste à droite choississez [utf8mb4_general_ci].
+Maintenant à l'intérieur de votre cmd !, et non votre éditeur de code(vs code); tapez la commande`copy .env.example .env` une fois que c'est fait veuillez ouvrir phpMyadmin et vous connecter avec votre compte. Puis appuyez sur [Nouvelle base de données] , nommée la: laravel; et juste à droite choississez [utf8mb4_general_ci] et appuyer sur [créer].
 
 Maintenant dans votre terminal tapez la commande `bin/db-build.sh`pour reconstruire la base de donnée automatiquement et l'injecter dans les tables dans votre base donnée dans MysQL, cela se fait tout seul vous n'avez rien à faire d'autre.
 
