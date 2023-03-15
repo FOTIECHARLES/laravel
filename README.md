@@ -40,9 +40,22 @@ Les images suivantes ont été utilisées :
 
 
 
-# Faire fonctionner ce projet laravel cloner
+# Faire fonctionner ce projet laravel en utilisant git clone
 
-Pour commencer veuiller cloner ce projet avec git clone, en spécifiant le nom ssh:
+## Prérequis
+
+- PHP
+- MariaDB 10 ou MySQL 5
+- composer 2.4.4
+- nodejs 18.12.1 et npm 8.19.2
+- wamp
+- vs code (un editeur de code...)
+- cmd
+
+## Installation
+
+
+Pour commencer veuiller cloner ce projet avec git clone, en spécifiant le nom ssh pour cela vous pouvez saisir la commande suivante:
 
 `git clone git@github.com:FOTIECHARLES/laravel.git`
 
@@ -57,6 +70,9 @@ Maintenant à l'intérieur de votre cmd !, et non votre éditeur de code(vs code
 Maintenant dans votre terminal tapez la commande `bin/db-build.sh`pour reconstruire la base de donnée automatiquement et l'injecter dans les tables dans votre base donnée dans MysQL, cela se fait tout seul vous n'avez rien à faire d'autre.
 
 Maintenant vous pouvez rafraîchir votre page localhost et voir des données apparaître dans la base de données nommée laravel.
+
+## Utilisation
+
 
 Dans votre éditeur de code (Vs code...) ouvrez deux terminaux, dans le premier tapez la commande`php artisan serve` et dans le second terminal tapez la commande `npm run dev`.
 Pour voir la page d'accueil,ouvrez : [Accueil](http://127.0.0.1:8000)
