@@ -4,12 +4,8 @@
 
 /**ceci est un commentaire*/
 
-.Dashbord{
 
-    text-align: center;
-    text-decoration: underline;
-}
-
+/*Utilisateur*/
 
 
 body {
@@ -33,6 +29,7 @@ header nav ul a{
     padding: 1rem 2rem;
     text-decoration: none;
 }
+
 h1 {
     font-size: 5rem;
 }
@@ -42,21 +39,59 @@ table td {
     border: 2px solid black;
 }
 
+.reservation-section-formulaire{
+
+text-align: center;
+border: 5px solid lightyellow;
+margin: 400px;
+padding: 200px;
+
+}
+
+.carte{
+    font-style: italic;
+}
+
+.menu-categorie-photo{
+    height: 900px;
+    width: 800px;
+}
+.menu-carte{
+
+padding: 0px;
+margin: 0px;
+
+}
+
 img.medium-size{
     width: 500px;
 }
 
 .banner {
-    height: 400px;
-    background-size: cover;
-    background-position: center;
+    height: 1000px;
+    background-size:cover;
+    background-position:center;
+    
 }
 
 .menu--photo-plat{
     width: 100px;
-    
+    margin: auto;
+    padding: auto;
 
 } 
+
+
+
+/*Administrateur*/
+
+
+
+.Dashbord{
+
+    text-align: center;
+    text-decoration: underline;
+}
 
 
 .form--radio-buttons--scrollable,
@@ -84,7 +119,7 @@ img.medium-size{
     border-color: black;
     border-width: 2px;
 }
-#actu{
+.admin-actu-tableau{
     border-style:solid;
     border-color: black;
     border-width: 2px;
@@ -118,4 +153,26 @@ img.medium-size{
     border-style:solid;
     border-color: black;
     border-width: 2px;
+}
+
+/*.menu--categorie-nom{
+    font-size:x-large;
+    color:yellow;
+    text-align: center;
+}
+
+.menu--categorie-description{
+    text-decoration: blink;
+    text-align: center;
+    
+}*/
+
+.menu--categorie{
+    text-align: center;
+}
+
+.admin-actu-tab{
+    text-align: center;
+    margin: auto;
+    padding: auto;
 }

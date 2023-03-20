@@ -17,16 +17,14 @@
         <tr>
       <th id="photo_plat">chemin </th>
       <th id="photo_plat">img </th>
-      <th id="photo_plat"><div>
-        <a href="{{ route('admin.photo_plat.create')}}">Ajouter</a>
-    </div></th>
+      <th id="photo_plat"><div><a href="{{ route('admin.photo_plat.create')}}">Ajouter</a></th></div>
         <tr>
 
             @foreach($photo_plats as $photo_plat)
             <TR>   
                 <td>{{ $photo_plat->chemin  }} </td>   
                 <td><img class="admin-liste-img" src="{{ asset($photo_plat->chemin)  }}" alt=""></td>   
-                <td><a href="{{ route( 'admin.photo_plat.edit', ['id' => $photo_plat->id])}}">modifier</a>
+                <td><div><a href="{{ route( 'admin.photo_plat.edit', ['id' => $photo_plat->id])}}">modifier</a></div>
                 <form action="{{ route('admin.photo_plat.delete',['id' => $photo_plat->id]) }}" method="post"onsubmit="return window.confirm('êtes vous sur de vouloir supprimer cet élement?');">
                 @csrf
                 @method('DELETE')
