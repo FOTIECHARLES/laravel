@@ -31,6 +31,7 @@ class EtiquetteController extends Controller
         // valeur par défaut
        $etiquette = new stdClass;
        
+      
        $etiquette->nom = '';
        $etiquette->description = '';
        
@@ -51,7 +52,8 @@ class EtiquetteController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'etiquette' => 'required|min:5|max:20',
+            'nom' => 'required|min:3|max:100',
+            'description' => 'required|min:5|max:1000',
             
 
         ]);
@@ -99,7 +101,9 @@ class EtiquetteController extends Controller
     public function update(Request $request, int $id)
     {
         $validated = $request->validate([
-            'etiquette' => 'required|min:5|max:20',
+            'nom' => 'required|min:3|max:100',
+            'description' => 'required|min:5|max:1000',
+            
 
         ]);
         
@@ -115,8 +119,7 @@ class EtiquetteController extends Controller
      }
      
      $etiquette->nom =$request->get('nom');
-     $etiquette->description  =$request->get('description');
-     $etiquette->save();
+     $etiquette->description =$request->get('description');$etiquette->save();
      
 
      $request->session()->flash('confirmation','vos modifications ont été enregisteés.');
