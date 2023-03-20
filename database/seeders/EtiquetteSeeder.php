@@ -41,7 +41,7 @@ class EtiquetteSeeder extends Seeder
             // affectation d'un nom
             $etiquette->nom = $etiquetteData;
             // affectation d'une description
-            $etiquette->description = '';
+            $etiquette->description ='Lorem ipsum dolor sit amet consectetur adipisicing elit.';
             // sauvegarde dans la BDD
             $etiquette->save();
         }

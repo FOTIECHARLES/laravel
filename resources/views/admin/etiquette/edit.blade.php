@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('page_title','Admin - Etiquette -Modification')
+@section('page_title','Admin - Modification')
              
 
 @section('content')
@@ -19,14 +19,14 @@
     Attention, les données n'ont pas été enregistrées, il y'a des erreurs dans le formulaire.
 </div>
 @endif
-
 <div>
 <form action="{{ route('admin.etiquette.update', ['id'=> $etiquette->id])}}" method="post">
 @csrf
 @method('PUT')
 </div>
 <div>
-    <input class=" @error('nom') form--input--error @enderror"type="text" name="nom" id=""value="{{ old('nom', $etiquette->nom) }}">
+    <label for="nom">Nom</label>
+    <input class=" @error('nom') form--input--error @enderror" type="text" name="nom" id="" value="{{ old('nom', $etiquette->nom) }}">
     @error('nom')
         <div class="form--error-message">
         {{ $message }}
@@ -34,8 +34,9 @@
     @enderror
 </div>
 <div>
-    <input class=" @error('description ') form--input--error @enderror"type="text" name="description " id=""value="{{ old('description ', $etiquette->description ) }}">
-    @error('description ')
+    <label for="description">Description</label>
+    <input class=" @error('description') form--input--error @enderror" type="text" name="description" id="" value="{{ old('description', $etiquette->description) }}">
+    @error('description')
         <div class="form--error-message">
         {{ $message }}
         </div>
